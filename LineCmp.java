@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LineCmp {
 	 //Master Branch
-	public static void main(String []args, String length1, String length2) {
+	public static void main(String []args, String length1, String length2, int compare) {
 	System.out.println("Welcome to Line Comparison Computation Program");
 	//UC1-model a line based on a point consisting of (x, y) co-ordinates using the Cartesian system, So that I can calculate its length.
     int x1, x2, y1, y2;
@@ -36,6 +36,15 @@ public class LineCmp {
         System.out.println("Line 1 and line 2 have Equal lengths.");
     else
         System.out.println("Line 1 and Line 2 do not have Equal lengths.");
+	
+	//UC3-compare two lines based on the end points, So that I know one line is equal, greater or less than the other line.
+    compare = line1.compareTo(line2);
+    if(line1 > line2)
+    	System.out.println("line1 is greater than line2");
+    else if(line1 < line2)
+    	System.out.println("line1 is less than line2");
+    else
+    	System.out.println("Lines are equal");
 	}
 }
 
